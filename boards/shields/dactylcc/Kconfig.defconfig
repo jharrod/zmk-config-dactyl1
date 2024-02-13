@@ -7,11 +7,11 @@ if SHIELD_DACTYLCC_LEFT
 		default "DactylCC"
 
 	config ZMK_SPLIT_ROLE_CENTRAL
-	default y
+		default y
 
 endif
 
-if SHIELD_DACTYLCC_LEFT || SHIELD__RIGHT
+if SHIELD_DACTYLCC_LEFT || SHIELD_DACTYLCC_RIGHT
 
 	config ZMK_SPLIT
 		default y

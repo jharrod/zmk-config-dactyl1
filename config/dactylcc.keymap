@@ -35,6 +35,10 @@
 #define MINIMIZE     LG(DOWN)
 #define UN_MINIMIZE  LG(LC(N))
 
+
+#define HYPER(key) LS(LC(LA(LG(key))))
+#define MEH(key)   LS(LC(LA(key)))
+
 &mt {
     flavor = "hold-preferred";
     tapping-term-ms = <500>;
@@ -73,35 +77,30 @@
     };
 
     behaviors {
-        //   td_mt_ls: tap_dance_mod_tap {
-        //       compatible = "zmk,behavior-tap-dance";
-        //       label = "TAP_DANCE_LSHIFT";
-        //       #binding-cells = <0>;
-        //       tapping-term-ms = <200>;
-        //       bindings = <&mt LSHIFT CAPSLOCK>, <&kp LCTRL>;
-        //   };
-        //   td_mt_rs: tap_dance_mod_tap {
-        //       compatible = "zmk,behavior-tap-dance";
-        //       label = "TAP_DANCE_RSHIFT";
-        //       #binding-cells = <0>;
-        //       tapping-term-ms = <200>;
-        //       bindings = <&mt RSHIFT CAPSLOCK>, <&kp RCTRL>;
-        //   };            
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
     };
+};
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1    &kp N2   &kp N3    &kp N4    &kp N5                             &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &kp MINUS
-&kp LBKT   &kp Q     &kp W    &kp E     &kp R     &kp T                              &kp Y     &kp U     &kp I     &kp O     &kp P    &kp BSLH
-&mo LOWER  &kp A     &kp S    &kp D     &kp F     &kp G                              &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp DQT
-&kp LSHFT  &kp Z     &kp X    &kp C     &kp V     &kp B                              &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
-           &kp GRAVE  &kp BSLH  &kp LEFT  &kp RIGHT                                               &kp UP  &kp DOWN  &kp LBKT  &kp RBKT
-                                                     &kp ESC &kp MINUS   &kp LBKT  &kp RBKT
-                                                                &kp GRAVE   &kp BSPC
-                                             &kp BSPC &kp DEL  &kp LGUI   &kp DEL   &kp RET   &kp SPACE
+&kp EQUAL   &kp N1        &kp N2       &kp N3       &kp N4         &kp N5                &kp N6     &kp N7       &kp N8       &kp N9        &kp N0   &kp MINUS
+&kp LBKT    &kp Q         &kp W        &kp E        &kp R          &kp T                 &kp Y      &kp U        &kp I        &kp O         &kp P    &kp BSLH
+&mo LOWER   &bhm LCTRL A  &bhm LGUI S  &bhm LALT D  &bhm LSHIFT F  &kp G                 &RSHIFT H  &bhm RALT J  &bhm LGUI K  &bhm RCTRL L  &kp SEMI &kp DQT
+&kp LSHFT   &kp Z         &kp X        &kp C        &kp V          &kp B                 &kp N      &kp M        &kp COMMA    &kp DOT       &kp FSLH &kp RSHFT
+                        &kp GRAVE     &kp BSLH     &kp LEFT     &kp RIGHT                                       &kp UP       &kp DOWN     &kp LBKT      &kp RBKT
+                                                              &kp ESC &kp MINUS    &kp LBKT  &kp RBKT
+                                                                      &kp GRAVE    &kp BSPC
+                                                    &kp BSPC &kp DEL  &kp LGUI     &kp DEL   &kp RET   &kp SPACE
             >;
         };
 

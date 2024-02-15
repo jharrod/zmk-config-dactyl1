@@ -68,7 +68,7 @@
 &kp CAPS    &hm LCTRL A   &hm LGUI S   &hm LALT D   &hm LSHIFT F   &kp G               &hm RSHIFT H   &hm RALT J   &hm LGUI K   &hm RCTRL L   &kp SEMI   &kp DQT
 &kp LSHFT   &kp Z         &kp X        &kp C        &kp V          &kp B               &kp N          &kp M        &kp COMMA    &kp DOT       &kp FSLH   &kp RSHFT
                         &kp GRAVE     &kp BSLH     &kp LEFT     &kp RIGHT                               &kp UP       &kp DOWN     &kp LBKT      &kp RBKT
-                                                                &kp ESC &none       &none 0 &none
+                                                                &kp ESC &none       &none &none
                                                                         &none       &bt BT_CLR
                                                    &kp BSPC &kp DEL  &kp LGUI       &mo LOWER   &kp RET   &kp SPACE
             >;

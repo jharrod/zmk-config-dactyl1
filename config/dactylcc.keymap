@@ -39,9 +39,9 @@
 &lt RAISE CAPS  &hm LCTRL A   &hm LGUI S   &hm LALT D   &hm LSHIFT F   &kp G               &kp H    &hm RSHIFT J   &hm RALT K   &hm LGUI L  &hm RCTRL SEMI   &kp DQT
 &kp LSHFT       &kp Z         &kp X        &kp C        &kp V          &kp B               &kp N    &kp M          &kp COMMA    &kp DOT     &kp FSLH   &kp RSHFT
                         &kp GRAVE     &kp BSLH     &kp LEFT     &kp RIGHT                       &kp UP         &kp DOWN     &kp LBKT    &kp RBKT
-                                                         &kp ESC &kp HYPER(N1)       &kp HYPER(N3) &kp HYPER(N4)
-                                                                 &kp HYPER(N2)       &kp HYPER(N5)
-                                               &kp BSPC &kp DEL  &kp HYPER(N5)       &lt LOWER HYPER(N6)   &kp RET   &kp SPACE
+                                                         &kp ESC &kp HYPER(Q)       &kp HYPER(R) &kp HYPER(T)
+                                                                 &kp HYPER(W)       &kp HYPER(Y)
+                                               &kp BSPC &kp DEL  &kp HYPER(E)       &lt LOWER HYPER(U)   &kp RET   &kp SPACE
             >;
         };
 

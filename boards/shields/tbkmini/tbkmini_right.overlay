@@ -1,5 +1,9 @@
 #include "tbkmini.dtsi"
 
+&default_transform {
+    col-offset = <7>;
+};
+
 &kscan0 {
     diode-direction = "col2row";
     row-gpios

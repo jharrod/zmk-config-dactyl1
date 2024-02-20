@@ -6,6 +6,7 @@
 
 
 &kscan0 {
+    diode-direction = "col2row";
     row-gpios
         = <&pro_micro 9 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
         , <&pro_micro 8 (GPIO_PULL_DOWN | GPIO_ACTIVE_HIGH)>
